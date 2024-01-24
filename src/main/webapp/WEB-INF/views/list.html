@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>BanhTrung List</title>
+</head>
+<body>
+<h2>BanhTrung List</h2>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Details</th>
+        <th>BanhTrung Type</th>
+        <th>Price</th>
+        <th>Status</th>
+    </tr>
+
+    <tr th:each="banhTrung : ${banhTrungList}">
+        <td th:text="${banhTrung.id}"></td>
+        <td th:text="${banhTrung.details}"></td>
+        <td th:text="${banhTrung.banhtrungtype}"></td>
+        <td th:text="${banhTrung.price}"></td>
+        <td th:text="${banhTrung.status} ? 'Còn hàng' : 'Hết hàng'"></td>
+    </tr>
+</table>
+</body>
+</html>

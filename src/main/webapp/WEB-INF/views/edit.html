@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit BanhTrung</title>
+</head>
+<body>
+<h2>Edit BanhTrung</h2>
+
+<form th:action="@{/banhtrung/edit/{id}}" th:object="${banhTrung}" th:method="post">
+    <input type="hidden" th:field="*{id}" />
+    <label>Details: <input type="text" th:field="*{details}" /></label><br/>
+    <label>BanhTrung Type: <input type="text" th:field="*{banhtrungtype}" /></label><br/>
+    <label>Price: <input type="text" th:field="*{price}" /></label><br/>
+    <label>Status: <input type="checkbox" th:field="*{status}" /></label><br/>
+
+    <input type="submit" value="Update BanhTrung"/>
+</form>
+</body>
+</html>ml>

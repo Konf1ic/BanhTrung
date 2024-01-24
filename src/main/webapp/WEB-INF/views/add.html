@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add BanhTrung</title>
+</head>
+<body>
+<h2>Add BanhTrung</h2>
+
+<form th:action="@{/banhtrung/add}" th:object="${banhTrung}" method="post">
+    <label>ID: <input type="text" th:field="*{id}" /></label><br/>
+    <label>Details: <input type="text" th:field="*{details}" /></label><br/>
+    <label>BanhTrung Type: <input type="text" th:field="*{banhtrungtype}" /></label><br/>
+    <label>Price: <input type="text" th:field="*{price}" /></label><br/>
+    <label>Status: <input type="checkbox" th:field="*{status}" /></label><br/>
+
+    <input type="submit" value="Add BanhTrung"/>
+</form>
+
+<a th:href="@{/banhtrung/list}">Back to List</a>
+</body>
+</html>

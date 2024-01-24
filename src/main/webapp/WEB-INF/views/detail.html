@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>BanhTrung Detail</title>
+</head>
+<body>
+<h2>BanhTrung Detail</h2>
+
+<p>ID: <span th:text="${banhTrung.id}"></span></p>
+<p>Details: <span th:text="${banhTrung.details}"></span></p>
+<p>BanhTrung Type: <span th:text="${banhTrung.banhtrungtype}"></span></p>
+<p>Price: <span th:text="${banhTrung.price}"></span></p>
+<p>Status: <span th:text="${banhTrung.status} ? 'Active' : 'Inactive'"></span></p>
+
+<a th:href="@{/banhtrung/list}">Back to List</a>
+</body>
+</html>
